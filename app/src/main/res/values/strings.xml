@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UBD_APP</string>
+    <string name="bottom1">즐겨찾기</string>
+    <string name="bottom2">주행기록</string>
+    <string name="bottom3">설정</string>
+
+    <string name="title_activity_maps"/>
+
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect
+    </string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This
+        device doesn\'t support Camera2 API.
+    </string>
+
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+</resources>

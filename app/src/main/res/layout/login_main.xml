@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    // 회원가입 버튼
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:background="@drawable/radius"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.90" android:id="@+id/login_box">
+
+
+        <Space android:layout_width="match_parent" android:layout_height="25dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView
+                    android:text="Email"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" android:id="@+id/idText"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:gravity="center_horizontal|center_vertical"
+            />
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/idBox"
+                    android:singleLine="true"
+            />
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView
+                    android:text="PW"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content" android:id="@+id/pwText"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:gravity="center_horizontal|center_vertical"
+            />
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/pwBox"
+                    android:singleLine="true"
+            />
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="10dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+            <Button
+                    android:text="sign UP"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" android:id="@+id/signup"
+            />
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+            <Button
+                    android:text="sign IN"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" android:id="@+id/signin"
+            />
+            <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="15dp"/>
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp" app:srcCompat="@drawable/main_logo" android:id="@+id/Logo"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="@+id/SignUp_Frame" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/login_box" app:layout_constraintVertical_bias="0.3"/>
+
+    <TextView
+            android:text="U B D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/logo_text"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/login_box" app:layout_constraintTop_toBottomOf="@+id/Logo"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.30"/>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:id="@+id/SignUp_Frame"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintVertical_bias="0.0" app:layout_constraintHorizontal_bias="0.0">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

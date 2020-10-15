@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    // 뒤로가기 버튼
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/radius"
+            android:layout_width="300dp"
+            android:layout_height="500dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:text="회원 가입"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:id="@+id/signup_view"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="50dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <TextView android:layout_width="80dp" android:layout_height="50dp"
+                  android:text="Email" android:textSize="20sp"
+                  android:gravity="center_horizontal|center_vertical"
+                  android:layout_weight="1"
+                  android:textColor="#000000"/>
+        <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="asd1234@naver.com"
+                android:ems="10"
+                android:id="@+id/signup_email"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+        <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+    </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView android:layout_width="80dp" android:layout_height="50dp"
+                      android:text="PWord" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:layout_weight="1"
+                      android:textColor="#000000"/>
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="6자리 이상"
+                    android:ems="10"
+                    android:id="@+id/signup_pw"
+                    android:layout_weight="1"
+                    android:singleLine="true"/>
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView android:layout_width="80dp" android:layout_height="50dp"
+                      android:text="PWord" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:layout_weight="1"
+                      android:textColor="#000000"/>
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/signup_pwCh"
+                    android:layout_weight="1"
+                    android:singleLine="true"/>
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView android:layout_width="80dp" android:layout_height="50dp"
+                      android:text="Name" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:layout_weight="1"
+                      android:textColor="#000000"/>
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/signup_name"
+                    android:layout_weight="1"
+                    android:singleLine="true"/>
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <TextView android:layout_width="80dp" android:layout_height="50dp"
+                      android:text="Birth" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:layout_weight="1"
+                      android:textColor="#000000"/>
+            <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:focusable="false"
+                    android:hint="Click"
+                    android:ems="10"
+                    android:id="@+id/signup_birth"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+            <TextView android:layout_width="70dp" android:layout_height="50dp"
+                      android:text="Weight" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:textColor="#000000"/>
+            <TextView android:layout_width="50dp" android:layout_height="50dp"
+                      android:text="(선택)" android:textSize="15sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:textColor="#000000"/>
+            <Space android:layout_width="20dp" android:layout_height="match_parent"/>
+            <NumberPicker
+                    android:id="@+id/signup_weight"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+            />
+            <Space android:layout_width="10dp" android:layout_height="match_parent"/>
+            <TextView android:layout_width="30dp" android:layout_height="50dp"
+                      android:text="kg" android:textSize="20sp"
+                      android:gravity="center_horizontal|center_vertical"
+                      android:textColor="#000000"/>
+            <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="50dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <Space
+                    android:layout_width="40dp"
+                    android:layout_height="50dp" android:layout_weight="0"/>
+            <Button
+                    android:text="Confirm" android:id="@+id/signup_Confirm"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_button_background"/>
+            <Space
+                    android:layout_width="20dp"
+                    android:layout_height="50dp" android:layout_weight="0"/>
+            <Button
+                    android:text="Back" android:id="@+id/signup_Back"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/selector_button_background"/>
+            <Space
+                    android:layout_width="40dp"
+                    android:layout_height="50dp" android:layout_weight="0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

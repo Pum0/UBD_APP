@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+
+    <!-- 각각의 Fragment를 넣을 Container -->
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/image_black_bar"
+                android:id="@+id/imageView4"
+                android:layout_gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <Space
+                    android:layout_width="20dp"
+                    android:layout_height="50dp"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" app:srcCompat="@drawable/button_favorite"
+                    android:id="@+id/imageView3" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="50dp" android:layout_weight="0"/>
+            <TextView
+                    android:text="즐겨찾기"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" android:id="@+id/name"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:gravity="left|center_vertical"/>
+        </LinearLayout>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            <Space
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" app:srcCompat="@drawable/button_house"
+                    android:id="@+id/favorite_image1" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <TextView
+                    android:text="집"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/favorite_text1"
+                    android:textSize="20sp"
+            />
+            <Space
+                    android:layout_width="110dp"
+                    android:layout_height="30dp" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" app:srcCompat="@drawable/button_business"
+                    android:id="@+id/favorite_image" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <TextView
+                    android:text="직장"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/favorite_text"
+                    android:textSize="20sp"
+                    android:layout_weight="0"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="100dp" android:layout_weight="1"/>
+            <TextView
+                    android:text=""
+                    android:ellipsize="marquee"
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/favoriteHouse"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_button_background"
+            />
+            <Space
+                    android:layout_width="5dp"
+                    android:layout_height="100dp" android:layout_weight="1"/>
+            <TextView
+                    android:text="" android:ellipsize="marquee"
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/favoriteBisiness"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_button_background"/>
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="100dp" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton1"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton2"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton3"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton4"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton5"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0"/>
+                <TextView
+                        android:text="" android:ellipsize="marquee"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/favoriteButton6"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_button_background"/>
+                <Space
+                        android:layout_width="10dp"
+                        android:layout_height="100dp" android:layout_weight="0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

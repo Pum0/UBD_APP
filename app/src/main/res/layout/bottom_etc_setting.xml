@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- 각각의 Fragment를 넣을 Container -->
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/image_black_bar"
+                android:id="@+id/imageView6"
+                android:layout_gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+            <Space
+                    android:layout_width="20dp"
+                    android:layout_height="50dp"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" app:srcCompat="@drawable/button_setting"
+                    android:id="@+id/imageView3" android:layout_weight="0"
+                    android:layout_gravity="left|center_vertical"/>
+            <Space
+                    android:layout_width="10dp"
+                    android:layout_height="50dp" android:layout_weight="0"/>
+            <TextView
+                    android:text="설정"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" android:id="@+id/name"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:gravity="left|center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <TextView
+                    android:text="몸무게 입력"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:gravity="center|start|center_horizontal|center_vertical"
+                    android:id="@+id/setting_text1" tools:layout_weight="1" android:textColor="#000000"
+                    android:layout_gravity="center_vertical" android:layout_marginStart="40dp"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:inputType="number"
+                    android:ems="2"
+                    android:background="@drawable/radius"
+                    android:id="@+id/ecteditText" android:layout_weight="1" android:gravity="center"
+                    android:layout_marginEnd="20dp" android:maxLength="3"/>
+            <Button
+                    android:text="입력"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" android:id="@+id/weightButton" android:layout_weight="0"
+                    android:layout_marginEnd="40dp"
+                    android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <Switch
+                    android:text="동기화 여부 확인"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/setting_switch2"
+                    android:layout_marginStart="40dp" android:textSize="16sp" android:layout_marginEnd="60dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <TextView
+                    android:text="검색기록 삭제"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:gravity="start|center_vertical"
+                    android:id="@+id/setting_text3" tools:layout_weight="1" android:layout_marginStart="40dp"
+                    android:textColor="#000000"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1"/>
+            <Button
+                    android:text="삭제"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" android:id="@+id/searchRemove" android:layout_weight="0"
+                    android:layout_marginEnd="40dp" android:layout_marginStart="20dp"
+                    android:textColor="#000000"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="30dp">
+            <TextView
+                    android:text="로그아웃"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:gravity="start|left|center_vertical"
+                    android:id="@+id/setting_text4"
+                    tools:layout_weight="1" android:layout_marginStart="40dp"
+                    android:textColor="#000000"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:layout_weight="1"/>
+            <Button
+                    android:text="로그아웃"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/logout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="40dp"
+            android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

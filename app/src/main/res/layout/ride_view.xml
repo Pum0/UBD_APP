@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/frameLayout2">
+
+    </FrameLayout>
+    <fragment
+            android:id="@+id/ride_fragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:name="com.naver.maps.map.MapFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.naver.maps.map.widget.CompassView
+            android:id="@+id/ride_compass"
+            android:layout_width="33dp"
+            android:layout_height="42dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="end|bottom"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.050000012"
+            app:layout_constraintHorizontal_bias="0.05"/>
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/navi_frame" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="30dp" android:baselineAligned="false">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:background="@drawable/safety_top" android:layout_marginStart="30dp">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_weight="1"
+            >
+                <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent" app:srcCompat="@mipmap/straight_arrow"
+                        android:id="@+id/Arrow" android:layout_weight="0" android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
+                        android:layout_gravity="center|left"/>
+                <TextView
+                        android:text="000m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:id="@+id/GoToArrow" android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical" android:textSize="32sp"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="#ffffff" android:layout_gravity="center|left"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:layout_weight="0" android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp">
+            <ImageButton
+                    android:id="@+id/GoToRide"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    tools:src="@drawable/button_cycle"
+                    android:src="@drawable/button_cycle"
+                    android:background="@drawable/selector_button_background"
+            />
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" app:srcCompat="@drawable/gps_disable"
+                    android:id="@+id/checkGPS" android:layout_marginTop="10dp"
+                    android:layout_weight="1" android:background="@drawable/safety_top"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:id="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:background="@drawable/safety_bottom"
+            android:baselineAligned="false" app:layout_constraintEnd_toEndOf="parent"
+    >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" android:gravity="center" android:layout_marginStart="20dp"
+                android:layout_marginEnd="5dp" android:layout_weight="1">
+            <TextView
+                    android:text="속도"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp" android:textColor="#ffffff" android:layout_weight="0"/>
+            <TextView
+                    android:text="00.0km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rideSpeed" android:gravity="center"
+                    android:textSize="28sp" android:textColor="#ffffff" android:layout_weight="1"
+                    android:layout_marginBottom="25dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" android:gravity="center" android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp" android:layout_weight="1">
+            <TextView
+                    android:text="남은거리"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView11"
+                    android:gravity="center_horizontal" android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp" android:textColor="#ffffff" android:layout_weight="0"/>
+            <TextView
+                    android:text="00.0km"
+                    android:layout_width="80sp"
+                    android:layout_height="wrap_content" android:id="@+id/RemainingDistance" android:gravity="center"
+                    android:textSize="18sp" android:textColor="#ffffff" android:layout_weight="1"
+                    android:layout_marginBottom="25dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" android:layout_weight="1" android:gravity="center"
+                android:layout_marginStart="10dp" android:layout_marginEnd="20dp">
+            <Button
+                    android:text="종료"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/finishButton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

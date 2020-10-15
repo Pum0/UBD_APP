@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/frameLayout" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#ffffff"
+    android:clickable="true">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="50dp" app:srcCompat="@drawable/button_back"
+                        android:id="@+id/backToMain" android:layout_weight="0" android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp" android:background="#00FFFFFF"/>
+                <TextView
+                        android:text="주행기록"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp" android:id="@+id/textView3" android:layout_weight="1"
+                        android:layout_marginTop="10dp" android:gravity="start|center_vertical"
+                        android:layout_marginStart="10dp" android:textSize="24sp" android:textColor="#000000"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:background="@drawable/radius"
+                    android:layout_marginEnd="20dp" android:layout_marginStart="20dp" android:layout_marginTop="10dp">
+                <TextView
+                        android:text="YYYY/MM/DD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" android:layout_marginTop="10dp" android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp" android:layout_marginEnd="10dp" android:textColor="#000000"
+                        android:id="@+id/recodeDate"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius" android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:id="@+id/recodeStart"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:textColor="#000000" android:gravity="start|center_vertical" android:text="start"
+                                android:textSize="16sp" android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" app:srcCompat="@drawable/arrow_forward"
+                                android:id="@+id/imageView7" android:layout_weight="0"
+                                android:layout_gravity="bottom|right" android:layout_marginStart="20dp"
+                                android:layout_marginBottom="10dp"/>
+                        <TextView
+                                android:text="destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:id="@+id/recodeFinish"
+                                android:layout_marginEnd="10dp"
+                                android:textColor="#000000" android:gravity="center_vertical"
+                                android:layout_marginTop="2dp" android:textSize="16sp"
+                                android:layout_marginBottom="5dp" android:layout_marginStart="20dp"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="1"
+                            android:background="@drawable/radius" android:layout_marginEnd="10dp">
+                        <TextView
+                                android:text="주행거리"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                        />
+                        <TextView
+                                android:text="00.00km"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                                android:id="@+id/recodeMileage"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:background="@drawable/radius" android:layout_marginStart="10dp">
+                        <TextView
+                                android:text="주행시간"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                        <TextView
+                                android:text="00:00:00"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                                android:id="@+id/recodeTime"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="1"
+                            android:background="@drawable/radius" android:layout_marginEnd="10dp">
+                        <TextView
+                                android:text="최고속도"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                        <TextView
+                                android:text="00.00km/h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                                android:id="@+id/recodeHigh"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:background="@drawable/radius" android:layout_marginStart="10dp">
+                        <TextView
+                                android:text="평균속도"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                        <TextView
+                                android:text="00.00km/h"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                                android:id="@+id/recodeAvg"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="1"
+                            android:background="@drawable/radius">
+                        <TextView
+                                android:text="소모 칼로리"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp" android:textColor="#000000"
+                                android:layout_marginBottom="5dp" android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                        <TextView
+                                android:text="000kcal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:gravity="center"
+                                android:layout_weight="1" android:textSize="18sp"
+                                android:textColor="#000000" android:layout_marginBottom="5dp"
+                                android:layout_marginStart="5dp" android:layout_marginEnd="5dp"
+                                android:id="@+id/recodeKcal"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:background="@drawable/radius"
+                    android:layout_marginEnd="20dp" android:layout_marginStart="20dp" android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp" android:id="@+id/recodeMap">
+
+                <fragment
+                        android:id="@+id/record_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/radius"
+                        android:layout_marginEnd="6dp" android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:name="com.naver.maps.map.MapFragment"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
